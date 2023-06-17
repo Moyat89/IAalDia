@@ -666,12 +666,14 @@ button {
 
     .container-despacho{
         display:grid;
+        width:100%;
         grid-template-areas:
         "article other"
         "sobre other"
         "form other";
         grid-template-columns: 2fr 1fr;
         margin-left: 0;
+        margin-right: 0;
         gap:2rem;
         font-size: 1.1rem;
     
