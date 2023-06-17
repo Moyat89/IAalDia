@@ -82,15 +82,18 @@ padding-bottom:5px;
     text-align: center;
     font-weight: 700;
     z-index: 9999;
+
 }
 
 .nav-scroll ul{
-    list-style-type: none;;
+    list-style-type: none;
+    
 }
 
 .nav-scroll a{
     color:rgb(0,0,0);
     text-transform: uppercase;
+
 }
 
 .nav-scroll a:hover{
@@ -204,14 +207,31 @@ footer img:hover{
     text-align: left;
 }
 
+
 .app{
     background-color: rgb(244, 246, 247);
     padding:3%;
+    display: flex;
+    flex-direction: column;
 }
 
 .app > *{
     padding-top:15px;
     padding-bottom: 15px;
+}
+
+
+.app h3{
+    flex-grow: 1;
+    
+}
+
+.app p{
+    flex-grow: 2;
+}
+
+.app .more{
+    flex-grow: 20px;
 }
 
 
@@ -574,10 +594,14 @@ button {
     .entry-container, .list-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap:3rem;
+        gap:2rem;
         width: 100%;
         margin-left:0;
         margin-right:0;
+    }
+
+    .list-container > *{
+        padding:20px;
     }
 
     .movie-container{
