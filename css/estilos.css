@@ -9,9 +9,7 @@
 html {
     font-family: 'Source Sans 3', sans-serif;
     color:rgb(0,0,0);
-    line-height: initial;
 }
-
 
 a{
     text-decoration: none;
@@ -56,15 +54,14 @@ abbr{
 body{
     width: 100%;
     max-width: 100vw;
-    color:rgb(0,0,0);
 
 }
 
 body *, body > * >*{
 padding-top:5px;
 padding-bottom:5px;
-}
 
+}
 
 /*Cabecera*/
 
@@ -72,7 +69,6 @@ padding-bottom:5px;
     font-weight: 400;
     letter-spacing: -0.6rem;
 }
-
 
 /*Navegación*/
 .nav-scroll{
@@ -150,8 +146,7 @@ footer img:hover{
     font-weight: normal;
 }
 
-/*Diferentes containers de contenido*/
-.container > *:not(.intro), .container-despacho{
+.container > *:not(.intro){
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-left: 1rem;
@@ -168,14 +163,8 @@ footer img:hover{
 .news img{
     object-fit:cover;
     width: 100%;
+    padding-top: 30px;
 }
-
-
-.entrada {
-    display: flex;
-    flex-direction: column;
-}
-
 
 .date{
     text-align: left;
@@ -196,9 +185,7 @@ footer img:hover{
     font-weight: normal;
 }
 
-
 /*Aplicaciones y peliculas*/
-
 
 .list-container, .movie-container{
     display:flex;
@@ -208,7 +195,6 @@ footer img:hover{
     padding-bottom: 1rem;
     text-align: left;
 }
-
 
 .app{
     background-color: rgb(244, 246, 247);
@@ -222,7 +208,6 @@ footer img:hover{
     padding-bottom: 15px;
 }
 
-
 .app h3{
     flex-grow: 1;
     
@@ -231,8 +216,6 @@ footer img:hover{
 .app p{
     flex-grow: 2;
 }
-
-
 
 .movies{
     background-color: rgb(244, 246, 247);
@@ -248,7 +231,6 @@ footer img:hover{
     font-weight: 700;
 }
 
-
 /*Diseño adaptativo para los videos de las peliculas*/
 .frame-movie{
     position: relative; 
@@ -260,7 +242,6 @@ footer img:hover{
 }
 
 iframe{
-    width: 100%;
     padding: 0;
     margin: 0;
     position: absolute; 
@@ -270,7 +251,6 @@ iframe{
     height: 100%;
    
 }
-
 
 /*Despacho 42*/
 
@@ -310,6 +290,12 @@ iframe{
     color:rgb(0, 0, 0);
 }
 
+.container-despacho{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
 figure img{
     object-fit: cover;
@@ -465,15 +451,16 @@ button {
     padding-bottom: 1rem;
 }
 
-
 @media screen and (min-width:576px){
 
 
     .entry-container {
         display: grid;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: column;
         gap:20px;
-    
+        row-gap: 10px;
     }
 
     .texto-cabecera h2, .texto-cabecera p, .entry-container, .list-container, .movie-container, .breadcrumb, .container-despacho{
@@ -487,7 +474,6 @@ button {
         background-size:cover;
     }
 
-
     /*Aplicaciones*/
 
     .list-container{
@@ -495,7 +481,6 @@ button {
             grid-template-columns: 1fr 1fr;
             gap: 20px;
     }
-
 
     /*despacho-42*/
 
@@ -505,7 +490,6 @@ button {
         padding: 2rem;
         margin-top: 1rem;
     }
-
 
     .sobre-despacho42 *{
         grid-column: 2;
@@ -517,7 +501,7 @@ button {
 
     .sobre-despacho42 figure{
         width:70%;
-        }
+    }
 
     .isologo{
         grid-column:1;
@@ -536,7 +520,6 @@ button {
 
 }
 
-
 @media screen and (min-width:992px){
 
     body > *:not(.container):not(footer) {
@@ -550,7 +533,6 @@ button {
         text-align: left;
     
     }
-
 
     nav ul{
         display: flex;
@@ -583,17 +565,20 @@ button {
 
     }
 
+    .entry-container{
+        margin-left:0;
+        margin-right:0;
+        width: 100%;
+    }
 
-    .entry-container, .list-container {
+    .list-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:3rem;
-        width: 100%;
-        margin-left:0;
-        margin-right:0;
+        
     }
 
-    .list-container > *{
+    .app > *{
         padding:20px;
     }
 
@@ -604,10 +589,6 @@ button {
         margin-left:0;
         margin-right:0;
     }
-
-
- 
-
 
     .foot-cover{
         overflow:hidden;
@@ -621,13 +602,11 @@ button {
         padding-left:0;
     }
     
-
     .about{
         display: inline-flex;
         column-gap:20px;
 
     }
-
 
     .foot-cover p{
         max-width:100vw;
@@ -638,16 +617,12 @@ button {
      
     }
 
-
-
- 
     /*despacho42*/
 
     .breadcrumb{
         margin-left: 0;
         margin-right: 0;  
     }
-
 
     .container-despacho > *{
         margin-left: 0;
@@ -667,14 +642,10 @@ button {
         gap:2rem;
         font-size: 1.1rem;
 
-    
     }
-
- 
 
     .expand-news{
         grid-area:article;
-  
     }
 
     .expand-news > *{
@@ -696,12 +667,9 @@ button {
         grid-area:other;
         font-size: 0.8rem;
         padding-left:15%;
-  
-    
     }
 
     .other-article{
-    
         display:grid;
         grid-template-columns: 1fr 3fr;
         
@@ -709,7 +677,6 @@ button {
 
     .other-article img{
         grid-column:1;
-
     }
 
     .info-articles{
@@ -718,7 +685,6 @@ button {
         text-transform: uppercase;
         grid-column: 2;
     }
-
 
     .sobre-despacho42{
         grid-area:sobre;
@@ -734,7 +700,6 @@ button {
         "picture resources";
         width: 100%;
     }
-
 
     .sobre-despacho42 figure{
         grid-area: picture;
@@ -767,10 +732,8 @@ button {
 
     .isologo{
     grid-column:1;
-
-        }
-
-        
+    }
+   
     form{
         grid-area:form;
     }
